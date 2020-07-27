@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get you pull request links quick and easy!">
+    <link rel="icon" type="image/png" href="/ninja.jpg" />
+    <title>Pull Request Ninja</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">PR-Ninja</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a href="#"  class="nav-link" data-toggle="modal" data-target="#modelId" id="usage">Usage <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="image" style="background-color: #001219;width: 100%;"><img src="/ninja.jpg" alt="" style="height: 200px; width: 300px;display: block;margin: 0 auto;"></div>
+        <form action="/">
+            <h1>Link</h1>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" name="link" id="link" placeholder="link to your pull request history">
+                <input type="submit" value="submit" class="btn btn-primary form-control" id="submit" disabled>
+            </div>
+        </form>
+        <p id="status" style="float: left">Waiting for link...<p id="spinner" class="m-0" style="display: inline-block; margin: 0;float: right;"></p></p>
+        <div id="content" style="height: 200px; overflow-y: auto;display: none;"></div>
+        <button class="btn btn-block btn-secondary mt-3" id="get_links" disabled>View links</button>
+        <button class="btn btn-primary m-2" id="previous" disabled>Previous</button>
+        <button class="btn btn-primary m-2" id="next" disabled>Next</button>
+        <ol class="result m-3 border border-secondary p-5"></ol>
+    </div>
+    <div class="footer">
+        <p class="text-center">Made with 💗 by <a href="https://github.com/Megxos">Mikah</a></p>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
