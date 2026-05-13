@@ -9,7 +9,7 @@
   "author": "Micah Elijah",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.22.1",
+    "express": "^5.2.1",
     "request": "^2.88.2",
     "socket.io": "^2.5.1"
   }
